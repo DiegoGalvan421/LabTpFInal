@@ -1,0 +1,15 @@
+
+/* de esta forma se insertan imagenes como fondo*/
+.Detalle {
+    background-image: url(imagenes/Tero.png);
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.NombreCientifico {
+    color: black;
+    font-family: Lucida Handwriting, Cursive;
+}
