@@ -1,47 +1,44 @@
 .articLista {
-    color: gray;
-    width: auto;
-    height: auto;
-    border: 2px solid black;
-    margin: 10px;
+  color: gray;
+  width: auto;
+  height: auto;
+  border: 2px solid black;
+  margin: 10px;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .animales {
-    margin: 10px;
-    border-style: double;
-    border-width: 5px;
-    color: black;
+  margin: 10px;
+  border-style: double;
+  border-width: 5px;
+  color: black;
 }
 
 .lista-animales {
-    min-width: 1000px;
-    margin: 0 auto;
-    background-color: lemonchiffon;
-
-
+  min-width: 1000px;
+  margin: 0 auto;
+  background-color: lemonchiffon;
 }
 
 .Listado {
-    background-color: #FAEBD7;
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+  background-color: #faebd7;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 animales-voladores {
-    display: flex;
-    flex-direction: row;
-    min-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  min-width: 1000px;
 }
-li{
-    border: 2px solid black;
-    flex: auto;
-    max-width: 50px;
-    max-height:50px;
+li {
+  border: 2px solid black;
+  flex: auto;
+  max-width: 50px;
+  max-height: 50px;
 }
