@@ -1,0 +1,26 @@
+
+.Navegacion {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bfc694;
+    color: #3c4b33;
+    padding: 15px 30px;
+}
+
+.LinksNav {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.LinksNav a {
+    color: #3c4b33;
+}
+
+.Logo {
+    font-size: 25px;
+}
