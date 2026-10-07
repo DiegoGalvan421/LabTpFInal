@@ -1,11 +1,30 @@
 /* de esta forma se insertan imagenes como fondo*/
 .Detalle {
-  background-image: url(imagenes/Tero.png);
+  /*background-image: url(imagenes/Tero.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 100vh;*/
   margin: 0;
-  height: 100vh;
+}
+
+.InfoGeneral{
+  display:flex;
+  border-style:dashed;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nombres {
+  border-style: dashed;
+}
+
+.DescripcionPrincipal {
+  border-style: dashed;
+}
+
+.DescripcionHabitat {
+  border-style: dashed;
 }
 
 .NombreCientifico {
