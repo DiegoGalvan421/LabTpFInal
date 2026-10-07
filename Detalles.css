@@ -11,7 +11,7 @@
 
 .Contenedor-Secciones {
   background-color: #faebd7;
-  width: 1000px;
+  width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,6 +21,10 @@
   gap: 30px;
 }
 
+.Seccion-Principal {
+  text-align: center;
+  font-size: 30px;
+}
 
 .NombreCientifico {
   color: black;
@@ -38,12 +42,16 @@
 }
 
 .Descripción-Habitat {
-  width: 300px; 
+  width: 300px;
+  padding: 20px;
+  row-gap: 100px;
 }
 
 .Seccion-Habitat {
+  background-color: #C49A6C;
   text-align: center;
   display: flex;
+  border-radius: 16px;
   gap: 200px;
 }
 
