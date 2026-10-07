@@ -7,13 +7,14 @@
   <title>Nombre del animal</title>
   <link rel="stylesheet" href="Detalles.css" />
   <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="footer.css" />
 </head>
 
 <body class="Detalle">
   <nav Class="Navegacion">
 
     <div Class="Logo"><a href=""><!-- Apretar en el nombre del zoologico 
-      te lleva a la pagina principal--></a>NOMBRE DEL ZOOLOGICO</div>
+      te lleva a la pagina principal--></a>ZOOLOGICO DEL COMAHUE</div>
     <!-- Podriamos decir que la pagina sea de un parque nacional-->
     <ul Class="LinksNav">
       <!--Podemos TEMPORARIAMENTE hacer con que el link de fauna te lleve a la categoria
@@ -29,21 +30,23 @@
   <main Class="Contenedor-Secciones">
     <!-- imágen del animal aqui (o talvez sea el fondo de la página)-->
     <h1>Tero</h1>
-    <h2 class="NombreCientifico">Nombre científico: Vanellus chilensis</h2>
-    <h3>Familia: Charadriidae</h3>
-    <section class="Descripción principal">
+
+    <section >
+      <a><img class="Foto" src="imagenes/Tero.png" alt="Tero" /></a>
+    </section>
+
+    <section class="Descripción-Principal">
+      <h2 class="NombreCientifico">Nombre científico: Vanellus chilensis</h2>
+      <h3>Familia: Charadriidae</h3>
       <p>
         Descripción muy increíble del Tero, hace muchas cosas y también tiene
         varias características interesantes, como por ejemplo:
       </p>
     </section>
-
-    <section class="Foto">
-      <a><img src="imagenes/Tero.png" alt="Tero" /></a>
-    </section>
-
+    
     <section class="Seccion-Habitat">
       <section class="Descripción-Habitat">
+        <h3>Descripción del Habitat</h3>
         <p>
           Descripción muy increíble del habitat, nuestro continente America del
           Sur, que bonito, muchas cosas lindas, en argentina y uruguay se
@@ -61,8 +64,9 @@
           <li>Peru</li>
         </ul>
       </section>
-      <section class="Foto-Habitat">
-        <a><img src="imagenes/Distribucion-en-Neuquen-Tero-comun.webp" alt="Imagen de habitat" /></a>
+      <section class="Seccion-Foto">
+        <a><img class="Foto-Habitat" src="imagenes/Distribucion-en-Neuquen-Tero-comun.webp" alt="Imagen de habitat" /></a>
+        <p>Distribución en Neuquén del tero común</p>
       </section>
 
     </section>
@@ -70,6 +74,23 @@
 
     <h3>Estado de conservación: No amenazada</h3>
   </main>
+
+  <footer class="Pie-De-Pagina">
+    <p>Zoológico del Comahue — Educación, Ciencia y Conservación
+
+      Ruta Nacional 22, Km 1200 — Valle del Comahue, Río Negro
+
+      Horarios: Martes a Domingos de 10:00 a 18:00 hs.</p>
+    <div Class="Logo"><a href=""><!-- Apretar en el nombre del zoologico 
+      te lleva a la pagina principal--></a>Información de Contacto:</div>
+    <ul Class="LinksNav">
+      <!--Podemos TEMPORARIAMENTE hacer con que el link de fauna te lleve a la categoria
+      de aves, como para poder hacer que la página se mueva de un lugar al otro-->
+      <li><a>Mail: info@zoologicodelcomahue.org.ar</a></li>
+      <li><a>Telefono: +54 (350) 488-2300</a></li>
+    </ul>
+    <p>Copyright © 2026 Zoologico Del Comahue</p>
+  </footer>
 
 </body>
 
