@@ -11,6 +11,7 @@
 
 .LinksNav {
     list-style: none;
+    text-align: left;
     display: flex;
     width: 100%;
     gap: 25px;

@@ -21,9 +21,12 @@
   gap: 30px;
 }
 
-.Seccion-Principal {
+.Titulo-Principal {
   text-align: center;
   font-size: 30px;
+}
+.Frase-Animal { 
+  font-size: 20px;
 }
 
 .NombreCientifico {
@@ -33,7 +36,8 @@
     Cursive;
 }
 
-.Descripción-Principal { 
+.Seccion-Descripcion { 
+ display: flex;
   min-width: 600px;
   margin:  auto;
   background-color: lemonchiffon;
