@@ -1,3 +1,15 @@
+.Fondo {
+  background-image: url(imagenes/Fondo.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+}
+
 .articLista {
   color: gray;
   width: auto;
@@ -18,27 +30,38 @@ ul {
 }
 
 .lista-animales {
-  min-width: 1000px;
-  margin: 0 auto;
+  min-width: 600px;
+  margin:  auto;
   background-color: lemonchiffon;
+  border-radius: 32px;
+  padding: 20px;
+
 }
 
-.Listado {
+.Contenedor-Principal {
   background-color: #faebd7;
   text-align: center;
-  width: 100%;
+  justify-content: center;
+  width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 100px;
+  border-radius: 8px;
+  padding: 20px;
 }
+
 animales-voladores {
   display: flex;
   flex-direction: row;
-  min-width: 1000px;
+  min-width: 500px;
 }
-li {
-  border: 2px solid black;
-  flex: auto;
-  max-width: 50px;
-  max-height: 50px;
+
+.animales {
+  width: 300px;           
+  background-color: #bfc694;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
 }

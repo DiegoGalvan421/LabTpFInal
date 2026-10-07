@@ -1,29 +1,32 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nombre del animal</title>
-    <link rel="stylesheet" href="Detalles.css" />
-    <link rel="stylesheet" href="nav.css"/>
-  </head>
-  <body class="Detalle">
 
-    <nav Class="Navegacion">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nombre del animal</title>
+  <link rel="stylesheet" href="Detalles.css" />
+  <link rel="stylesheet" href="nav.css" />
+</head>
+
+<body class="Detalle">
+  <nav Class="Navegacion">
 
     <div Class="Logo"><a href=""><!-- Apretar en el nombre del zoologico 
       te lleva a la pagina principal--></a>NOMBRE DEL ZOOLOGICO</div>
+    <!-- Podriamos decir que la pagina sea de un parque nacional-->
     <ul Class="LinksNav">
       <!--Podemos TEMPORARIAMENTE hacer con que el link de fauna te lleve a la categoria
       de aves, como para poder hacer que la página se mueva de un lugar al otro-->
       <li><a href="">Sobre el Parque</a></li>
       <li><a href="index.html">Fauna</a></li>
+      <!-- Si hacemos la pagina sobre un zoologico podriamios agregar info de la flora-->
       <li><a href="">Entradas</a></li>
     </ul>
 
 
-    </nav>
-
+  </nav>
+  <main Class="Contenedor-Secciones">
     <!-- imágen del animal aqui (o talvez sea el fondo de la página)-->
     <h1>Tero</h1>
     <h2 class="NombreCientifico">Nombre científico: Vanellus chilensis</h2>
@@ -34,25 +37,40 @@
         varias características interesantes, como por ejemplo:
       </p>
     </section>
-    <section class="Descripción Habitat">
-      <p>
-        Descripción muy increíble del habitat, nuestro continente America del
-        Sur, que bonito, muchas cosas lindas, en argentina y uruguay se
-        encuentra en los llanos
-      </p>
-      <h3>Distribución Geográfica</h3>
-      <ul>
-        <li>Argentina</li>
-        <li>Uruguay</li>
-        <li>Bolivia</li>
-        <li>Brasil</li>
-        <li>Chile</li>
-        <li>Colombia</li>
-        <li>Venezuela</li>
-        <li>Peru</li>
-      </ul>
+
+    <section class="Foto">
+      <a><img src="imagenes/Tero.png" alt="Tero" /></a>
     </section>
 
+    <section class="Seccion-Habitat">
+      <section class="Descripción-Habitat">
+        <p>
+          Descripción muy increíble del habitat, nuestro continente America del
+          Sur, que bonito, muchas cosas lindas, en argentina y uruguay se
+          encuentra en los llanos
+        </p>
+        <h3>Distribución Geográfica</h3>
+        <ul>
+          <li>Argentina</li>
+          <li>Uruguay</li>
+          <li>Bolivia</li>
+          <li>Brasil</li>
+          <li>Chile</li>
+          <li>Colombia</li>
+          <li>Venezuela</li>
+          <li>Peru</li>
+        </ul>
+      </section>
+      <section class="Foto-Habitat">
+        <a><img src="imagenes/Distribucion-en-Neuquen-Tero-comun.webp" alt="Imagen de habitat" /></a>
+      </section>
+
+    </section>
+
+
     <h3>Estado de conservación: No amenazada</h3>
-  </body>
+  </main>
+
+</body>
+
 </html>

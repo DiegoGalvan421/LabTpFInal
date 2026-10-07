@@ -1,17 +1,22 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zoologico</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="nav.css" />
-  </head>
-  <body Class="Listado">
-    <nav Class="Navegacion">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoologico</title>
+  <link rel="stylesheet" href="PaginaListas.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+
+
+
+<body Class="Fondo">
+  <nav Class="Navegacion">
 
     <div Class="Logo"><a href=""><!-- Apretar en el nombre del zoologico 
-      te lleva a la pagina principal--></a>NOMBRE DEL ZOOLOGICO</div>
+      te lleva a la pagina principal--></a>ZOOLOGICO DEL COMAHUE</div>
     <ul Class="LinksNav">
       <!--Podemos TEMPORARIAMENTE hacer con que el link de fauna te lleve a la categoria
       de aves, como para poder hacer que la página se mueva de un lugar al otro-->
@@ -21,37 +26,32 @@
     </ul>
 
 
-    </nav>
+  </nav>
+  <main class="Contenedor-Principal">
     <h1>Aves</h1>
     <!--las etiquetas h, son para titulos, mientras mas alto, menos importante y p es para parrafos -->
-    <p>Descubre los fascinantes animales que pueden volar.</p>
+    <h2>Descubre los fascinantes animales que pueden volar</h2>
 
-    <h3>Lista de animales voladores</h3>
-    <p>
-      Explora nuestra lista de animales voladores y aprende más sobre ellos.
-    </p>
+
     <section class="lista-animales">
+      <h3>Lista de animales voladores</h3>
+      <p>
+        Explora nuestra lista de animales voladores y aprende más sobre ellos.
+      </p>
+
       <ul>
         <li>
-          <a href="AnimalesDetallados.html" target="_blank"
-            ><img class="animales" src="imagenes/Tero.png" alt="Tero"
-          /></a>
+          <a href="AnimalesDetallados.html"><img class="animales" src="imagenes/Tero.png" alt="Tero" /></a>
         </li>
-          <li>
-            <a href="AnimalesDetallados.html" target="_blank"
-            ><img class="animales" src="imagenes/Murcielago.png" alt="Murciélago"
-            /></a>
-          </li>
-          <li>
-            <a href="AnimalesDetallados.html" target="_blank"
-              ><img class="animales" src="imagenes/Colibri.png" alt="Colibrí"
-            /></a>
-          </li>
-          <li>
-            <a href="AnimalesDetallados.html" target="_blank"
-            ><img class="animales" src="imagenes/Loro.png" alt="Loro"
-            /></a>
-          </li>
+        <li>
+          <a href="AnimalesDetallados.html"><img class="animales" src="imagenes/Hornero.png" alt="Hornero" /></a>
+        </li>
+        <li>
+          <a href="AnimalesDetallados.html"><img class="animales" src="imagenes/Colibri.png" alt="Colibrí" /></a>
+        </li>
+        <li>
+          <a href="AnimalesDetallados.html"><img class="animales" src="imagenes/Loro.png" alt="Loro" /></a>
+        </li>
       </ul>
       <!-- la etiqueta anchor abre el enlace en una nueva pestaña  y target="_blank" hacer que se abra en una nueva pestaña -->
       <!-- la etiqueta img es para insertar imagenes, podemos descargarlas de internet y darle la ruta o darle la ruta de la web-->
@@ -61,5 +61,23 @@
       <!-- si yo le pongo id="miLista" dentro de la etiqueta, ahora esa quedo identificada el id es unico-->
       <!-- si quisiera hacer que varios elementos compartan el mismo identificar uso class="algo"-->
     </section>
-  </body>
+  </main>
+  <footer class="Pie-De-Pagina">
+    <p>Zoológico del Comahue — Educación, Ciencia y Conservación
+
+      Ruta Nacional 22, Km 1200 — Valle del Comahue, Río Negro
+
+      Horarios: Martes a Domingos de 10:00 a 18:00 hs.</p>
+    <div Class="Logo"><a href=""><!-- Apretar en el nombre del zoologico 
+      te lleva a la pagina principal--></a>Información de Contacto:</div>
+    <ul Class="LinksNav">
+      <!--Podemos TEMPORARIAMENTE hacer con que el link de fauna te lleve a la categoria
+      de aves, como para poder hacer que la página se mueva de un lugar al otro-->
+      <li><a>Mail: info@zoologicodelcomahue.org.ar</a></li>
+      <li><a>Telefono: +54 (350) 488-2300</a></li>
+    </ul>
+    <p>Copyright © 2026 Zoologico Del Comahue</p>
+  </footer>
+</body>
+
 </html>

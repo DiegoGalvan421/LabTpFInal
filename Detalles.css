@@ -1,11 +1,16 @@
 /* de esta forma se insertan imagenes como fondo*/
 .Detalle {
-  background-image: url(imagenes/Tero.png);
+  background-image: url(imagenes/Fondo.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   margin: 0;
   height: 100vh;
+}
+
+.Contenedor-Secciones {
+  padding: 50px;
 }
 
 .NombreCientifico {
@@ -13,4 +18,9 @@
   font-family:
     Lucida Handwriting,
     Cursive;
+}
+
+.Foto {
+  border-radius: 16px;
+  
 }
