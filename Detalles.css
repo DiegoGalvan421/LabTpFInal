@@ -1,10 +1,10 @@
 /* de esta forma se insertan imagenes como fondo*/
 .Detalle {
-  /*background-image: url(imagenes/Tero.png);
+  background-image: url(imagenes/Fondo.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;*/
+  background-attachment: fixed;
   margin: 0;
 }
 
@@ -27,9 +27,65 @@
   border-style: dashed;
 }
 
+.Contenedor-Secciones {
+  background-color: #faebd7;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 30px;
+}
+
+.Titulo-Principal {
+  text-align: center;
+  font-size: 30px;
+}
+.Frase-Animal { 
+  font-size: 20px;
+}
+
 .NombreCientifico {
   color: black;
   font-family:
     Lucida Handwriting,
     Cursive;
+}
+
+.Seccion-Descripcion { 
+ display: flex;
+  min-width: 600px;
+  margin:  auto;
+  background-color: lemonchiffon;
+  border-radius: 32px;
+  padding: 20px;
+}
+
+.Descripción-Habitat {
+  width: 300px;
+  padding: 20px;
+  row-gap: 100px;
+}
+
+.Seccion-Habitat {
+  background-color: #C49A6C;
+  text-align: center;
+  display: flex;
+  border-radius: 16px;
+  gap: 200px;
+}
+
+.Foto-Habitat { 
+  width: 400px;           
+  border-radius: 32px;
+  padding: 10px;
+}
+
+.Foto {
+  width: 400px;           
+  border-radius: 16px;
+  padding: 10px;
+  text-align: center;
 }

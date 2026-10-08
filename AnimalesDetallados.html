@@ -1,43 +1,70 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nombre del animal</title>
-    <link rel="stylesheet" href="Detalles.css" />
-    <link rel="stylesheet" href="nav.css"/>
-  </head>
-  <body class="Detalle">
 
-    <nav Class="Navegacion">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tero</title>
+  <link rel="stylesheet" href="Detalles.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+
+<body class="Detalle">
+  <nav Class="Navegacion">
 
     <div Class="Logo"><a href=""><!-- Apretar en el nombre del zoologico 
-      te lleva a la pagina principal--></a>NOMBRE DEL ZOOLOGICO</div>
+      te lleva a la pagina principal--></a>PARQUE NACIONAL DEL COMAHUE</div>
+    <!-- Podriamos decir que la pagina sea de un parque nacional-->
     <ul Class="LinksNav">
       <!--Podemos TEMPORARIAMENTE hacer con que el link de fauna te lleve a la categoria
       de aves, como para poder hacer que la página se mueva de un lugar al otro-->
       <li><a href="">Sobre el Parque</a></li>
       <li><a href="index.html">Fauna</a></li>
+      <!-- Si hacemos la pagina sobre un zoologico podriamios agregar info de la flora-->
       <li><a href="">Entradas</a></li>
     </ul>
 
 
-    </nav>
-    <div class="InfoGeneral">
-        <!-- imágen del animal aqui (o talvez sea el fondo de la página)-->
-        <div class="nombres">
-          <h1>Tero</h1>
-          <h2 class="NombreCientifico">Vanellus chilensis</h2>
-        </div>
-        <img src="imagenes/Tero.png">
-        <div class="DescripcionPrincipal">
-          <p>
-            Pequeña ave zancuda que puede llegar a los 38cm de largo
-          </p>
-          <p>Podrá ver de cerca sus intesos ojos rojos y escuchar el canto que la nombró</p>
-      <div class="DescripcionHabitat">
+  </nav>
+  <main Class="Contenedor-Secciones">
+    <!-- imágen del animal aqui (o talvez sea el fondo de la página)-->
+    <header class="Titulo-Principal">
+      <h1>TERO</h1>
+      <p class="Frase-Animal">"El guardián territorial de las pampas y pastizales de América"</p>
+    </header>
+
+    <section class="Seccion-Descripcion">
+      <section class="Descripcion">
+        <h2 class="NombreCientifico">Nombre científico: Vanellus chilensis</h2>
+        <h3>Familia: Charadriidae</h3>
         <p>
-          Ave nativa de América Latina, encontrada usualmente cerca de lagunas y llanos, y es compañera conocida de quien vive en zonas rurales
+          El tero (Vanellus chilensis) es una emblemática ave zancuda de la familia Charadriidae, muy reconocida en
+          América del Sur por su elegancia y su comportamiento siempre alerta. Presenta un plumaje distintivo de tonos
+          grises y pardos en el dorso, un pecho negro brillante, una fina cresta o copete en la cabeza y llamativos ojos
+          y patas de color rojo. Cuenta con pequeños espolones rojizos bajo las alas que utiliza para proteger su nido.
+          Es célebre por su fuerte vocalización estridente (de donde proviene su nombre popular "teru-teru"), la cual
+          emite para dar la alarma ante la presencia de extraños o posibles amenazas, actuando como un verdadero
+          guardián territorial.
+        </p>
+      </section>
+
+      <a><img class="Foto" src="imagenes/Tero2.webp" alt="Tero" /></a>
+    </section>
+    
+    <section>
+      
+    </section>
+
+    <section class="Seccion-Habitat">
+      <section class="Descripción-Habitat">
+        <h3>Descripción del Habitat</h3>
+        <p>
+          Es un ave sumamente adaptable que prefiere los ecosistemas abiertos y despejados para mantener un amplio rango
+          de visión. Habita principalmente en pastizales, praderas, campos agrícolas, márgenes de lagunas, ríos y
+          humedales. Debido a su cercanía con las actividades humanas, se ha integrado con éxito en entornos urbanos y
+          suburbanos, siendo muy común encontrarlo en parques, jardines amplios, campos de golf y zonas rurales del
+          valle.
         </p>
         <h3>Distribución Geográfica</h3>
         <ul>
@@ -50,9 +77,37 @@
           <li>Venezuela</li>
           <li>Peru</li>
         </ul>
-      </div>
+      </section>
+      <section class="Seccion-Foto">
+        <a><img class="Foto-Habitat" src="imagenes/Distribucion-en-Neuquen-Tero-comun.webp"
+            alt="Imagen de habitat" /></a>
+        <p>Distribución en Neuquén del tero común</p>
+      </section>
 
-      <h3 class="EstadoConservacion">Estado de conservación: Preocupación Menor</h3>
-    </div>
-  </body>
+    </section>
+
+
+    <h3>Estado de conservación: No amenazada</h3>
+  </main>
+
+    <footer class="Pie-De-Pagina">
+    <section class="Info-General">
+      <p>Parque Nacional del Comahue — Protegiendo el patrimonio natural y cultural del Valle del Comahue, Río Negro</p>
+      <p>Ruta Nacional 22, Km 1200 — Valle del Comahue, Río Negro</p>
+      <p>Horarios: Martes a Domingos de 10:00 a 18:00 hs.</p>
+    </section>
+
+    <div Class="Logo"><a href=""><!-- Apretar en el nombre del zoologico 
+      te lleva a la pagina principal--></a>Información de Contacto:</div>
+    <ul Class="LinksNav">
+      <!--Podemos TEMPORARIAMENTE hacer con que el link de fauna te lleve a la categoria
+      de aves, como para poder hacer que la página se mueva de un lugar al otro-->
+      <li><a>Mail: info@parquenacionalcomahue.org.ar</a></li>
+      <li><a>Telefono: +54 (350) 488-2300</a></li>
+    </ul>
+    <p>Copyright © 2026 Parque Nacional Del Comahue</p>
+  </footer>
+
+</body>
+
 </html>
