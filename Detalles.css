@@ -6,6 +6,11 @@
   background-size: cover;
   background-attachment: fixed;
   margin: 0;
+  padding: 0;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  flex-grow: 2;
 }
 
 .InfoGeneral{
