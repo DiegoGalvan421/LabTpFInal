@@ -72,10 +72,11 @@
   row-gap: 100px;
 }
 
-.Seccion-Habitat {
+.Informacion-General {
   background-color: #C49A6C;
   text-align: center;
   display: flex;
+  flex-direction: column;
   border-radius: 16px;
   gap: 200px;
 }
