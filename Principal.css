@@ -17,8 +17,7 @@
 .SobreParque{
     background-color: lemonchiffon;
     border-radius: 32;
-    border-style: dotted;
-    border-color: black;
+
 }
 .Fauna{
     background-color: #faebd7;
@@ -31,8 +30,6 @@
     justify-content: space-evenly;
     background-color: lemonchiffon;
     border-radius: 32;
-    border-style: dotted;
-    border-color: black;
     flex-grow: 1;
     font-size: small;
 }
