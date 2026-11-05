@@ -1,0 +1,38 @@
+.PaginaPrincipal{
+    background-image: url(imagenes/Fondo.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    flex-grow: 4;
+}
+.CuerpoPrincipal{
+    margin:0;
+}
+.SobreParque{
+    background-color: lemonchiffon;
+    border-radius: 32;
+    border-style: dotted;
+    border-color: black;
+}
+.Fauna{
+    background-color: #faebd7;
+}
+
+.Conducta {
+    margin:1px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: lemonchiffon;
+    border-radius: 32;
+    border-style: dotted;
+    border-color: black;
+    flex-grow: 1;
+    font-size: small;
+}
