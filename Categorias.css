@@ -1,0 +1,43 @@
+.General{
+    display: flex;
+    width: 100%;
+    flex-direction: columns;
+    justify-content: center;
+    height: auto;
+    flex-wrap: wrap;
+    background-color: lemonchiffon;
+    border-radius: 32px;
+}
+.Contenedor-Categoria{
+    background-color: #faebd7;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 30px;
+}
+.imagenCat{
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    width: 100%;
+}
+.contenedorCat{
+
+    display: flex;
+    flex-direction: row;
+  background-color: #bfc694;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  max-width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+.contenedorCat:hover{
+  transform: scale(1.1);
+}
