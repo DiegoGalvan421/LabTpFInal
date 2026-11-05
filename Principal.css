@@ -33,3 +33,8 @@
     flex-grow: 1;
     font-size: small;
 }
+.Horario{
+    text-align: end;
+    margin:1;
+    font-size: 12px;
+}
