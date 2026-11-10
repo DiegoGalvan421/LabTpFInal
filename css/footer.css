@@ -6,6 +6,7 @@
     background-color: #bfc694;
     color: #3c4b33;
     padding: 30px;
+    display: flex;
 }
 
 .LinksNav {
@@ -20,6 +21,8 @@
     color: #3c4b33;
 }
 
-.Logo {
-    font-size: 25px;
+.Logo-Footer{
+    height: 300px;
+    font-size: 300px;
+    position: center;
 }

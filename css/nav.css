@@ -2,20 +2,20 @@
 .Navegacion {
     margin: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     background-color: #bfc694;
     color: #3c4b33;
     padding: 15px 30px;
     width: 100%; 
+    gap: 30px;
 }
 
 .LinksNav {
     list-style: none;
     text-align: left;
     display: flex;
-    width: 100%;
-    gap: 25px;
+    gap: 50px;
     margin: 0;
     padding: 0;
 }
@@ -24,6 +24,9 @@
     color: #3c4b33;
 }
 
-.Logo {
-    font-size: 25px;
+
+.Logo-Header{
+    height: 150px;
+    width: auto;
+    display: block;
 }

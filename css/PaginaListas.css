@@ -29,6 +29,7 @@ ul {
   width: 200px;
   height: 200px;
   object-fit: cover;
+  object-position: center;
   margin: 10px;
   border-style: double;
   border-width: 5px;
@@ -45,7 +46,6 @@ ul {
 }
 
 .Contenedor-Principal {
-  background-color: #faebd7;
   text-align: center;
   justify-content: center;
   width: 1000px;

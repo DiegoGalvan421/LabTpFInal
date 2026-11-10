@@ -9,7 +9,7 @@
     border-radius: 32px;
 }
 .Contenedor-Categoria{
-    background-color: #faebd7;
+  background-color: #faebd7;
   width: 1200px;
   display: flex;
   flex-direction: column;
