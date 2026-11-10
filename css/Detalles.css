@@ -1,6 +1,6 @@
 /* de esta forma se insertan imagenes como fondo*/
 .Detalle {
-  background-image: url(imagenes/Fondo.jpeg);
+  background-image: url(../imagenes/Fondo.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

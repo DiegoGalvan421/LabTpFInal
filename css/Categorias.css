@@ -27,8 +27,8 @@
 }
 .contenedorCat{
 
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
   background-color: #bfc694;
   border: 1px solid #ddd;
   border-radius: 10px;
