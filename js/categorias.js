@@ -3,6 +3,8 @@ const ImagenesCategoria = {
 
 }
 
+let temporizador;
+
 const tarjetas = document.querySelectorAll('contenedorCat');
 
 tarjetas.forEach(tarjeta => {
@@ -16,19 +18,34 @@ tarjetas.forEach(tarjeta => {
 
     tarjeta.addEventListener('mouseleave', () => {
         console.log('El usuario puso el mouse sobre la tarjeta');
-
+        terminarAnimacionFondo();
     })
 
 });
 
 
 function iniciarAnimacionFondo(tarjeta, categoria) {
-    
-    const listaImagenes = ImagenesCategoria[categoria];
-    
-    listaImagenes.forEach(imagen => {
-        const imagen = tarjeta.querySelector('img');
+    let i=0;
+    let imagen;
 
-        imagen.src = imagen;
-    });
+    const listaImagenes = ImagenesCategoria[categoria];
+
+    temporizador = setInterval(() => {
+        
+        const etiquetaImagen = tarjeta.querySelector('img');
+        
+        if(i<listaImagenes.length){
+            imagen = listaImagenes[i];
+            i++;
+        }else{
+            i=0;
+            imagen = listaImagenes[i];
+        }
+
+        etiquetaImagen.src = imagen;
+    },1000);
+}
+
+function terminarAnimacionFondo(){
+    clearInterval(temporizador);
 }
