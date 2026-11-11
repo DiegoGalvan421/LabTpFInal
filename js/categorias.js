@@ -1,20 +1,34 @@
 const ImagenesCategoria = {
-    aereos: ["../imagenes/Vanellus_chilensis_map.svg.webp", "../imagenes/loro2.webp"],
-    
+    imagenAereos: ["../imagenes/Vanellus_chilensis_map.svg.webp", "../imagenes/loro2.webp"],
+
 }
 
-const tarjeta = document.querySelector('contenedorCat');
+const tarjetas = document.querySelectorAll('contenedorCat');
 
-tarjeta.addEventListener('mouseenter', () => {
-    console.log('El usuario puso el mouse sobre la tarjeta');
-    //nombre función  
-})
+tarjetas.forEach(tarjeta => {
+    tarjeta.addEventListener('mouseenter', () => {
+        console.log('El usuario puso el mouse sobre la tarjeta');
 
-tarjeta.addEventListener('mouseleave', () => {
-    console.log('El usuario puso el mouse sobre la tarjeta');
+        const idCategoria = tarjeta.id;
+
+        iniciarAnimacionFondo(idCategoria, idCategoria);  
+    })
+
+    tarjeta.addEventListener('mouseleave', () => {
+        console.log('El usuario puso el mouse sobre la tarjeta');
+
+    })
+
+});
+
+
+function iniciarAnimacionFondo(tarjeta, categoria) {
     
-})
+    const listaImagenes = ImagenesCategoria[categoria];
+    
+    listaImagenes.forEach(imagen => {
+        const imagen = tarjeta.querySelector('img');
 
-function iniciarAnimacionFondo() {
-
+        imagen.src = imagen;
+    });
 }
