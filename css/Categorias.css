@@ -7,26 +7,27 @@
     flex-wrap: wrap;
     background-color: lemonchiffon;
     border-radius: 32px;
+    padding: 30px;
 }
 .Contenedor-Categoria{
-  background-color: #faebd7;
   width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
   border-radius: 8px;
-  padding: 20px;
+  padding: 50px;
   gap: 30px;
 }
 .imagenCat{
-    display: flex;
-    flex-direction: column;
-    height:auto;
+    height:100%;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
 .contenedorCat{
-
   display: flex;
   flex-direction: row;
   background-color: #bfc694;
@@ -35,9 +36,13 @@
   padding: 10px;
   text-align: center;
   margin: 10px;
-  max-width: 300px;
+  max-width: 350px;
+  aspect-ratio: 4/3;
+  height: 350px;
   transition: transform 0.3s ease-in-out;
+  position: relative;
 }
+
 .contenedorCat:hover{
   transform: scale(1.1);
 }

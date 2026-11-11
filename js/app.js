@@ -21,6 +21,7 @@ function cargarFooter() {
     const piePagina = document.getElementById('pie-pagina-dinamico');
 
     const contenidoFooter = `
+
     <section class="Info-General">
         <p>Parque Nacional del Comahue — Protegiendo el patrimonio natural y cultural del Valle del Comahue, Río Negro</p>
         <p>Ruta Nacional 22, Km 1200 — Valle del Comahue, Río Negro</p>

@@ -22,7 +22,7 @@ const detalleAnimales = {
           valle.`,
     distribucionGeografica: ["Argentina", "Uruguay", "Bolivia", "Brasil", "Chile", "Colombia", "Venezuela", "Peru"],
     imagenHabitat: "../imagenes/Vanellus_chilensis_map.svg.webp",
-    pieImagen: "Distribución en Neuquén del tero común",
+    pieImagen: "Distribución geográfica del tero",
     estado: "Estado de conservación: Preocupación menor"
   },
 
