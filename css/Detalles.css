@@ -47,6 +47,11 @@
 .Titulo-Principal {
   text-align: center;
   font-size: 30px;
+  justify-content: center;
+  background-color: rgba(20, 25, 30, 0.75);
+  color: #f4f4f9;
+  border-radius: 16px;
+  padding: 5px;
 }
 .Frase-Animal { 
   font-size: 20px;

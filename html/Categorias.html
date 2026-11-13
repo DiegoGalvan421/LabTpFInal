@@ -16,23 +16,31 @@
   <header id="encabezado-dinamico"></header>
 
   <main class="Contenedor-Categoria">
-    <h1>Categorias de Animales</h1>
-    <h2>Puedes investigar todos los tipos de animales que protegemos</h2>
+    <section class="titulo">
+      <h1>Categorías de Animales</h1>
+      <h2>Puedes investigar todos los tipos de animales que protegemos</h2>
+    </section>
+
 
     <Section class="General">
-      <div class="contenedorCat">
-        <a href="CategoriaEspecifica.html?Id=aereos" target="_self"><img id="imagenAereo" class="imagenCat" src="" /> <img
+      <div id="aereos" class="contenedorCat">
+        <a href="CategoriaEspecifica.html?Id=aereos" target="_self">
+          <img id="imagenAereo" class="imagenCat activa" src="../imagenes/condorAndino.webp" />
+          <img class="imagenCat" src="" />
+        </a>
+        <h3 class="titulo-categoria">Animales Aéreos</h3>
+      </div>
+      <div id="acuaticos" class="contenedorCat">
+        <a href="CategoriaEspecifica.html" target="_self"><img class="imagenCat activa" src="../imagenes/perca.webp" /> <img
             class="imagenCat" src="" /></a>
-            <h3 class="titulo-categoria">Animales Aéreos</h3>
+        <h3 class="titulo-categoria">Animales Acuáticos</h3>
       </div>
-      <div class="contenedorCat">
-        <a href="CategoriaEspecifica.html" target="_self"><img class="imagenCat" src="../imagenes/Aguila.png" /> <img
-            class="imagenCat" src="../imagenes/Hornero.png" /></a>
-            <h3 class="titulo-categoria">Animales Aéreos</h3>
-      </div>
-      <div class="contenedorCat">
-        <a href="CategoriaEspecifica.html" target="_self"><img class="imagenCat" src="../imagenes/Aguila.png" /> <img
-            class="imagenCat" src="../imagenes/Hornero.png" /></a>
+
+      <div id="terrestres" class="contenedorCat">
+        <a href="CategoriaEspecifica.html" target="_self"><img class="imagenCat activa" src="../imagenes/puma.jpeg" /> <img
+            class="imagenCat" src="" />
+        </a>
+        <h3 class="titulo-categoria">Animales Terrestres</h3>
       </div>
     </Section>
   </main>

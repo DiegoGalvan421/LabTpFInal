@@ -1,51 +1,88 @@
 const ImagenesCategoria = {
-    imagenAereos: ["../imagenes/Vanellus_chilensis_map.svg.webp", "../imagenes/loro2.webp"],
-
+    aereos: ["../imagenes/Tero2.webp", "../imagenes/loro2.webp", "../imagenes/hornero.jpeg","../imagenes/aguilaMora.jpeg"],
+    terrestres: ["../imagenes/guanaco.webp", "../imagenes/choique.jpeg","../imagenes/mara.webp", "../imagenes/zorroGris.jpg"],
+    acuaticos: ["../imagenes/pejerrey2.jpeg","../imagenes/bagreOtuno.jpeg","../imagenes/pancoraDeRio.jpeg","../imagenes/almeja.jpeg"]
 }
 
+
+const tarjetas = document.querySelectorAll('.contenedorCat');
 let temporizador;
 
-const tarjetas = document.querySelectorAll('contenedorCat');
-
 tarjetas.forEach(tarjeta => {
+    const imagenes = tarjeta.querySelectorAll('img');
+    const imagenPrincipal = imagenes[0]; //Guardamos la referencia a la primer etiqueta
+    const imagenSecundaria = imagenes[1]; //Guardamos la referencia a la segunda etiqueta
+
+    
+    let imagenPorDefecto = imagenPrincipal;
+
+    const idCategoria = tarjeta.id;
+    const listaImagenes = ImagenesCategoria[idCategoria];
+
+
     tarjeta.addEventListener('mouseenter', () => {
-        console.log('El usuario puso el mouse sobre la tarjeta');
+    console.log('El usuario puso el mouse sobre la tarjeta');
 
-        const idCategoria = tarjeta.id;
+        console.log("Id de la tarjeta:", idCategoria);
 
-        iniciarAnimacionFondo(idCategoria, idCategoria);  
+        imagenPorDefecto = imagenPrincipal.src; //Guardamos la referencia a la imagen original por defecto para reestablecerla luego
+        iniciarAnimacionFondo(imagenPrincipal, imagenSecundaria, listaImagenes, idCategoria);
     })
 
     tarjeta.addEventListener('mouseleave', () => {
-        console.log('El usuario puso el mouse sobre la tarjeta');
-        terminarAnimacionFondo();
+        console.log('El usuario sacó el mouse sobre la tarjeta');
+
+        terminarAnimacionFondo(temporizador, imagenPrincipal, imagenSecundaria, imagenPorDefecto);
     })
 
 });
 
-
-function iniciarAnimacionFondo(tarjeta, categoria) {
-    let i=0;
-    let imagen;
-
-    const listaImagenes = ImagenesCategoria[categoria];
+function iniciarAnimacionFondo(img1, img2, listaImagenes, categoria) {
+    let numIntervalo = 1;
+    let i = 0;
+    clearInterval(temporizador);
 
     temporizador = setInterval(() => {
-        
-        const etiquetaImagen = tarjeta.querySelector('img');
-        
-        if(i<listaImagenes.length){
-            imagen = listaImagenes[i];
-            i++;
-        }else{
-            i=0;
-            imagen = listaImagenes[i];
+        if (numIntervalo % 2 !== 0) {
+            if (i === listaImagenes.length - 1) {
+                img2.src = listaImagenes[i];
+                i = 0;
+            } else {
+                img2.src = listaImagenes[i];
+                i++;
+            }
+            img2.src = listaImagenes[i];
+            img1.classList.remove('activa');
+            img2.classList.add('activa');
+            numIntervalo++;
+        } else {
+            if (i === listaImagenes.length - 1) {
+                img1.src = listaImagenes[i];
+                i = 0;
+            } else {
+                img1.src = listaImagenes[i];
+                i++;
+            }
+
+            console.log('imagen:', listaImagenes[i]);
+            img1.src = listaImagenes[i];
+            img2.classList.remove('activa');
+            img1.classList.add('activa');
+            numIntervalo++;
         }
+        console.log('intervalo número: ', numIntervalo);
+        console.log('número de iteración(i):', i);
 
-        etiquetaImagen.src = imagen;
-    },1000);
+    }, 1500);
 }
 
-function terminarAnimacionFondo(){
+function terminarAnimacionFondo(temporizador, imagenPrincipal, imagenSecundaria, imagenPorDefecto) {
     clearInterval(temporizador);
+
+    imagenPrincipal.src = imagenPorDefecto;
+
+    imagenPrincipal.classList.add('activa');
+    imagenSecundaria.classList.remove('activa');
 }
+
+
