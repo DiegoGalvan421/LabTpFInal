@@ -9,14 +9,24 @@
     padding: 15px 30px;
     width: 100%; 
 }
-
+.Botones-Superiores{
+    background-color: #faebd7;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center;
+}
 .LinksNav {
     list-style: none;
     display: flex;
     gap: 25px;
     margin: 0;
 }
-
+.LinksNav a{
+    text-decoration: none;
+}
+.LinksNav a:hover{
+    text-decoration: underline;
+}
 .Navegacion .LinksNav {
     text-align: left;
     width: 100%;
