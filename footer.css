@@ -1,25 +1,7 @@
 .Pie-De-Pagina {
     margin: 0;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
     background-color: #bfc694;
     color: #3c4b33;
     padding: 30px;
-}
-
-.LinksNav {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 5px;
-}
-
-.LinksNav a {
-    color: #3c4b33;
-}
-
-.Logo {
-    font-size: 25px;
 }

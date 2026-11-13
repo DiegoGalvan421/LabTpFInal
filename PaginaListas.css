@@ -11,25 +11,15 @@
   flex-direction: column;
   flex-grow: 2;
 }
-
-
-.articLista {
-  color: gray;
-  width: auto;
-  height: auto;
-  border: 2px solid black;
-  margin: 10px;
-}
-
-ul {
-  list-style-type: none;
-}
-
 .animales {
   margin: 10px;
-  border-style: double;
-  border-width: 5px;
-  color: black;
+  width: 300px;
+  background-color: #bfc694;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .lista-animales {
@@ -54,21 +44,6 @@ ul {
   padding: 20px;
 }
 
-animales-voladores {
-  display: flex;
-  flex-direction: row;
-  min-width: 500px;
-}
-
-.animales {
-  width: 300px;           
-  background-color: #bfc694;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
-.animales:hover{
-  transform:scale(1.1);
+.animales:hover {
+  transform: scale(1.1);
 }
