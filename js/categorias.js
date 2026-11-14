@@ -57,7 +57,6 @@ function iniciarAnimacionFondo(img1, img2, listaImagenes) {
                 img2.src = listaImagenes[i];
                 i++;
             }
-            img2.src = listaImagenes[i];
             img1.classList.remove('activa');
             img2.classList.add('activa');
             numIntervalo++;
@@ -69,9 +68,7 @@ function iniciarAnimacionFondo(img1, img2, listaImagenes) {
                 img1.src = listaImagenes[i];
                 i++;
             }
-
             //console.log('imagen:', listaImagenes[i]);
-            img1.src = listaImagenes[i];
             img2.classList.remove('activa');
             img1.classList.add('activa');
             numIntervalo++;
