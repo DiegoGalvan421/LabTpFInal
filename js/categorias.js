@@ -10,6 +10,7 @@ let temporizador;
 
 tarjetas.forEach(tarjeta => {
     const imagenes = tarjeta.querySelectorAll('img');
+    const tituloCategoria = tarjeta.querySelector('h3');
     const imagenPrincipal = imagenes[0]; //Guardamos la referencia a la primer etiqueta
     const imagenSecundaria = imagenes[1]; //Guardamos la referencia a la segunda etiqueta
 
@@ -23,21 +24,21 @@ tarjetas.forEach(tarjeta => {
     tarjeta.addEventListener('mouseenter', () => {
     console.log('El usuario puso el mouse sobre la tarjeta');
 
-        console.log("Id de la tarjeta:", idCategoria);
+        //console.log("Id de la tarjeta:", idCategoria);
 
         imagenPorDefecto = imagenPrincipal.src; //Guardamos la referencia a la imagen original por defecto para reestablecerla luego
-        iniciarAnimacionFondo(imagenPrincipal, imagenSecundaria, listaImagenes, idCategoria);
+        iniciarAnimacionFondo(imagenPrincipal, imagenSecundaria, listaImagenes, tituloCategoria);
     })
 
     tarjeta.addEventListener('mouseleave', () => {
         console.log('El usuario sacó el mouse sobre la tarjeta');
 
-        terminarAnimacionFondo(temporizador, imagenPrincipal, imagenSecundaria, imagenPorDefecto);
+        terminarAnimacionFondo(temporizador, imagenPrincipal, imagenSecundaria, imagenPorDefecto, tituloCategoria);
     })
 
 });
 
-function iniciarAnimacionFondo(img1, img2, listaImagenes, categoria) {
+function iniciarAnimacionFondo(img1, img2, listaImagenes, titulo) {
     let numIntervalo = 1;
     let i = 0;
     clearInterval(temporizador);
@@ -64,25 +65,27 @@ function iniciarAnimacionFondo(img1, img2, listaImagenes, categoria) {
                 i++;
             }
 
-            console.log('imagen:', listaImagenes[i]);
+            //console.log('imagen:', listaImagenes[i]);
             img1.src = listaImagenes[i];
             img2.classList.remove('activa');
             img1.classList.add('activa');
             numIntervalo++;
         }
-        console.log('intervalo número: ', numIntervalo);
-        console.log('número de iteración(i):', i);
+        titulo.classList.add('activa');
+        //console.log('intervalo número: ', numIntervalo);
+        //console.log('número de iteración(i):', i);
 
     }, 1500);
 }
 
-function terminarAnimacionFondo(temporizador, imagenPrincipal, imagenSecundaria, imagenPorDefecto) {
+function terminarAnimacionFondo(temporizador, imagenPrincipal, imagenSecundaria, imagenPorDefecto, titulo) {
     clearInterval(temporizador);
 
     imagenPrincipal.src = imagenPorDefecto;
 
     imagenPrincipal.classList.add('activa');
     imagenSecundaria.classList.remove('activa');
+    titulo.classList.remove('activa');
 }
 
 
