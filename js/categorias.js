@@ -27,7 +27,7 @@ tarjetas.forEach(tarjeta => {
         //console.log("Id de la tarjeta:", idCategoria);
 
         imagenPorDefecto = imagenPrincipal.src; //Guardamos la referencia a la imagen original por defecto para reestablecerla luego
-        iniciarAnimacionFondo(imagenPrincipal, imagenSecundaria, listaImagenes, tituloCategoria);
+        iniciarAnimacionFondo(imagenPrincipal, imagenSecundaria, listaImagenes);
         iniciarAnimacionTitulo(tituloCategoria);
     })
 
