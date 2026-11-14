@@ -28,6 +28,7 @@ tarjetas.forEach(tarjeta => {
 
         imagenPorDefecto = imagenPrincipal.src; //Guardamos la referencia a la imagen original por defecto para reestablecerla luego
         iniciarAnimacionFondo(imagenPrincipal, imagenSecundaria, listaImagenes, tituloCategoria);
+        iniciarAnimacionTitulo(tituloCategoria);
     })
 
     tarjeta.addEventListener('mouseleave', () => {
@@ -38,7 +39,11 @@ tarjetas.forEach(tarjeta => {
 
 });
 
-function iniciarAnimacionFondo(img1, img2, listaImagenes, titulo) {
+function iniciarAnimacionTitulo(titulo){
+    titulo.classList.add('activa');
+}
+
+function iniciarAnimacionFondo(img1, img2, listaImagenes) {
     let numIntervalo = 1;
     let i = 0;
     clearInterval(temporizador);
@@ -71,7 +76,6 @@ function iniciarAnimacionFondo(img1, img2, listaImagenes, titulo) {
             img1.classList.add('activa');
             numIntervalo++;
         }
-        titulo.classList.add('activa');
         //console.log('intervalo número: ', numIntervalo);
         //console.log('número de iteración(i):', i);
 
