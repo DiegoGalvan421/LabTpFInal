@@ -38,8 +38,6 @@ function cargarFooter() {
       <img class="Logo-Footer" src="../imagenes/parque_nacional_comahue_logo_transparent.png" alt="Logo" /></img>
     </section>`;
 
-    
-
     piePagina.innerHTML = contenidoFooter;
 }
 

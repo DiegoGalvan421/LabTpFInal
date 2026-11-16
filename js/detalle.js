@@ -15,6 +15,7 @@ const detalleAnimales = {
           emite para dar la alarma ante la presencia de extraños o posibles amenazas, actuando como un verdadero
           guardián territorial.`,
     foto: "../imagenes/Tero2.webp",
+    altFoto: "Imagen del tero",
     descripcionHabitat: `Es un ave sumamente adaptable que prefiere los ecosistemas abiertos y despejados para mantener un amplio rango
           de visión. Habita principalmente en pastizales, praderas, campos agrícolas, márgenes de lagunas, ríos y
           humedales. Debido a su cercanía con las actividades humanas, se ha integrado con éxito en entornos urbanos y
@@ -22,6 +23,7 @@ const detalleAnimales = {
           valle.`,
     distribucionGeografica: ["Argentina", "Uruguay", "Bolivia", "Brasil", "Chile", "Colombia", "Venezuela", "Peru"],
     imagenHabitat: "../imagenes/Vanellus_chilensis_map.svg.webp",
+    altImagenHabitat: "Mapa de lugares donde habita el tero",
     pieImagen: "Distribución geográfica del tero",
     estado: "Estado de conservación: Preocupación menor"
   },
@@ -38,10 +40,12 @@ const detalleAnimales = {
       Las plumas del abdomen, patas, lomo y supracaudales son de color desde amarillo hasta verde oliva (según la subespecie). La parte central del abdomen es rojo-anaranjada. Las subcaudales son de un tono amarillo oliváceo. 
       Las cobertoras alares son verdes oliváceas, mientras que las infracobertoras son verdes obscuro. Las rémiges o primarias son azules, con barba interna grisácea. La cola es gris olivácea. El pico es gris oscuro, ganchudo y corto. Las patas son de color rosa pálido.`,
     foto: "../imagenes/loro2.webp",
+    altFoto: "Imagen del loro",
     descripcionHabitat: `Habita en ecosistemas áridos y semiáridos de la estepa patagónica, el monte de llanuras y mesetas, cañadones y valles fluviales.
       Requiere fundamentalmente de bardas y paredes verticales de arcilla o arenisca blanda para excavar sus túneles de nidificación, desplazándose diariamente a través de áreas de vegetación arbustiva y campos en busca de alimento.`,
     distribucionGeografica: ["Argentina", "Chile", "Uruguay", "Paraguay"],
     imagenHabitat: "../imagenes/Cyanoliseus_patagonus_range_map.png",
+    altImagenHabitat: "Mapa de lugares donde habita el loro",
     pieImagen: "Distribución Geográfica del Loro Barranquero",
     estado: "Estado de conservación: Preocupación menor"
   }
@@ -63,9 +67,9 @@ function armarListaDistribucionGeo(listaPaises) {
 
 // Esta función carga la información que tenemos guardada en la página de AnimalesDetallados dependiendo el animal
 function cargarDetalle() {
-  const textoURL = window.location.search;
-  const parametros = new URLSearchParams(textoURL);
-  const idAnimal = parametros.get('id');
+  const textoURL = window.location.search; //Captura como texto todo lo que aparece en la dirección web a partir del signo de interrogación. Ej: "?id=tero"
+  const parametros = new URLSearchParams(textoURL); //Toma la cadena previamente leía y la vuelve un objeto estructurado de js fácil de leer y manipular
+  const idAnimal = parametros.get('id'); //Busca en el documento que coincida con el nombre del id
 
   const animal = detalleAnimales[idAnimal];
 
@@ -85,8 +89,10 @@ function cargarDetalle() {
     document.getElementById('familia').textContent = animal.familia;
     document.getElementById('descripcionGeneral').textContent = animal.descripcionGeneral;
     document.getElementById('foto').src = animal.foto;
+    document.getElementById('foto').alt = animal.altFoto;
     document.getElementById('descripcionHabitat').textContent = animal.descripcionHabitat;
     document.getElementById('imagenHabitat').src = animal.imagenHabitat;
+    document.getElementById('imagenHabitat').alt = animal.altImagenHabitat;
     document.getElementById('pieImagen').textContent = animal.pieImagen;
     document.getElementById('estado').textContent = animal.estado;
   }
