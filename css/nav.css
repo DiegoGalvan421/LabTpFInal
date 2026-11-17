@@ -1,0 +1,32 @@
+
+.Navegacion {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #bfc694;
+    color: #3c4b33;
+    padding: 15px 30px;
+    width: 100%; 
+    gap: 30px;
+}
+
+.LinksNav {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.LinksNav a {
+    color: #3c4b33;
+}
+
+
+.Logo-Header{
+    height: 130px;
+    width: auto;
+    display: block;
+}

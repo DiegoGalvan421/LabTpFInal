@@ -1,0 +1,103 @@
+/* de esta forma se insertan imagenes como fondo*/
+.Detalle {
+  background-image: url(../imagenes/Fondo.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
+.InfoGeneral{
+  display:flex;
+  border-style:dashed;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nombres {
+  border-style: dashed;
+}
+
+.DescripcionPrincipal {
+  border-style: dashed;
+}
+
+.DescripcionHabitat {
+  border-style: dashed;
+}
+
+.Contenedor-Secciones {
+  
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 30px;
+}
+
+.Titulo-Principal {
+  text-align: center;
+  font-size: 30px;
+  justify-content: center;
+  background-color: rgba(20, 25, 30, 0.75);
+  color: #f4f4f9;
+  border-radius: 16px;
+  padding: 5px;
+}
+.Frase-Animal { 
+  font-size: 20px;
+}
+
+.NombreCientifico {
+  color: black;
+  font-family:
+    Lucida Handwriting,
+    Cursive;
+}
+
+.Seccion-Descripcion { 
+ display: flex;
+  min-width: 600px;
+  margin:  auto;
+  background-color: lemonchiffon;
+  border-radius: 32px;
+  padding: 20px;
+}
+
+.Descripción-Habitat {
+  width: 300px;
+  padding: 20px;
+  row-gap: 100px;
+}
+
+.Seccion-Habitat {
+  background-color: #C49A6C;
+  text-align: center;
+  display: flex;
+  border-radius: 16px;
+  gap: 200px;
+}
+
+.Foto-Habitat { 
+  width: 300px;
+  height: 400px;           
+  border-radius: 32px;
+  padding: 10px;
+}
+
+.Foto {
+  width: 400px; 
+  height: 300px;          
+  border-radius: 16px;
+  padding: 10px;
+  text-align: center;
+}

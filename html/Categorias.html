@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorias de Animales</title>
+  <link rel="stylesheet" href="../css/Detalles.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/Categorias.css">
+</head>
+
+<body class="Detalle">
+
+  <header id="encabezado-dinamico"></header>
+
+  <main class="Contenedor-Categoria">
+    <section class="titulo">
+      <h1>Categorías de Animales</h1>
+      <p>Conoce a las especies que habitan nuestros distintos ecosistemas. Cada entorno está diseñado para respetar sus
+        comportamientos naturales y promover su conservación.</p>
+    </section>
+
+    <Section class="General">
+      <section class="contenedorIntruccion">
+        <h2>Elige un entorno para comenzar</h2>
+        <p>"Selecciona una categoría para descubrir las especies que habitan el parque, sus características únicas y los horarios de avistaje."</p>
+      </section>
+
+      <section class="contenedorTarjetas">
+        <div id="aereos" class="contenedorCat">
+          <a href="CategoriaEspecifica.html?id=aereos" target="_self">
+            <img id="imagenAereo" class="imagenCat activa" src="../imagenes/condorAndino.webp" />
+            <img class="imagenCat" src="" />
+          </a>
+          <h3 class="titulo-categoria">Animales Aéreos</h3>
+        </div>
+        <div id="acuaticos" class="contenedorCat">
+          <a href="CategoriaEspecifica.html?id=acuaticos" target="_self"><img class="imagenCat activa"
+              src="../imagenes/perca.webp" /> <img class="imagenCat" src="" /></a>
+          <h3 class="titulo-categoria">Animales Acuáticos</h3>
+        </div>
+
+        <div id="terrestres" class="contenedorCat">
+          <a href="CategoriaEspecifica.html?id=terrestres" target="_self"><img class="imagenCat activa" src="../imagenes/puma.jpeg" />
+            <img class="imagenCat" src="" />
+          </a>
+          <h3 class="titulo-categoria">Animales Terrestres</h3>
+        </div>
+      </section>
+
+    </Section>
+  </main>
+
+  <footer id="pie-pagina-dinamico" class="Pie-De-Pagina"></footer>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/categorias.js"></script>
+
+</body>
+
+</html>
