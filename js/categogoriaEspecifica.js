@@ -12,7 +12,7 @@ const tarjetasCategorias = {
 const tarjetasAnimales = {
     aereos: [
         { nombre: "Tero", link: "AnimalesDetallados.html?id=tero", imagen: "../imagenes/Tero.png" },
-        { nombre: "Loro", link: "AnimalesDetallados.html?id=loro", imagen: "../imagenes/loro.jpeg" },
+        { nombre: "Loro Barranquero", link: "AnimalesDetallados.html?id=loro", imagen: "../imagenes/loro.jpeg" },
 
     ],
     acuaticos: [
@@ -32,7 +32,7 @@ function armarListaAnimales(categoria) { //Idea para el futuro: filtro por carac
     tarjetasAnimales[categoria].forEach(animal => {
         idContenedorAnimales.innerHTML += `
         <div class="tarjetaAnimal">
-            <p class="nombreAnimal">${animal.nombre}</p>
+            <h3 class="nombreAnimal">${animal.nombre}</h3>
             <a href="${animal.link}" target="_self"><img class="animales" src="${animal.imagen}" alt="${animal.nombre}" /></a>
         </div>`
     })
