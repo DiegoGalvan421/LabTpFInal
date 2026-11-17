@@ -1,0 +1,80 @@
+.ParquePrincipal{
+  background-image: url(../imagenes/Fondo.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
+.Horario{
+  font-size: medium;
+  justify-content: right;
+  background-color: rgba(20, 25, 30, 0.75);
+  color: #f4f4f9;
+  border-radius: 16px;
+  padding: 10px;
+  width: 558px;
+}
+
+.Direccion{
+  font-size: medium;
+  justify-content: center;
+  background-color: rgba(20, 25, 30, 0.75);
+  color: #f4f4f9;
+  border-radius: 10px;
+  padding: 10px;
+  width: 558px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.SobreParque{
+    display: flex;
+    flex-direction: column;
+    background-color: lemonchiffon;
+    border-radius: 32px;
+    padding: 20px;
+    font-size: larger;
+}
+
+.Fauna{
+    display: flex;
+    background-color: lemonchiffon;
+    border-radius: 32px;
+    padding: 20px;
+    font-size: larger;
+}
+.FaunaTexto{
+    display:flex;
+    flex-direction: column;
+}
+.Conducta{
+    display: flex;
+    flex-direction: column;
+    background-color: lemonchiffon;
+    border-radius: 32px;
+    padding: 20px;
+    font-size: larger;
+}
+.Secciones{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap:40px;
+}
+.animalesPrincipal{
+   width: 300px; 
+  height: 300px;          
+  border-radius: 16px;
+  padding: 10px;
+}

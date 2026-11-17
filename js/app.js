@@ -7,8 +7,8 @@ function cargarHeader() {
                 <img class="Logo-Header" src="../imagenes/parque_nacional_comahue_logo_transparent.png" alt="Logo" />
             </div>
             <ul class="LinksNav">
-                <li><a href="index.html"><strong>PARQUE NACIONAL DEL COMAHUE</strong></a></li>
-                <li><a href="index.html">Sobre el Parque</a></li>
+                <li><a href="SobreParque.html"><strong>PARQUE NACIONAL DEL COMAHUE</strong></a></li>
+                <li><a href="SobreParque.html">Sobre el Parque</a></li>
                 <li><a href="Categorias.html">Fauna</a></li>
                 <li><a href="entradas.html">Entradas</a></li>
             </ul>
