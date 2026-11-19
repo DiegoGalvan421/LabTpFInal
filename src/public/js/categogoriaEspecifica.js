@@ -23,35 +23,112 @@ const tarjetasAnimales = {
     ]
 };
 
-function armarListaAnimales(categoria) { //Idea para el futuro: filtro por características como alimentación.
-    // También podríamos armar un carrusel que se maneje mediante flechas en lugar de mostrar todas las tarjetas
-    const idContenedorAnimales = document.getElementById('contenedorTarjetasAnimales');
 
-    idContenedorAnimales.innerHTML = '';
+const parametros = new URLSearchParams(window.location.search);
+const idCategoria = parametros.get('id');
 
-    tarjetasAnimales[categoria].forEach(animal => {
-        idContenedorAnimales.innerHTML += `
-        <div class="tarjetaAnimal">
-            <h3 class="nombreAnimal">${animal.nombre}</h3>
-            <a href="${animal.link}" target="_self"><img class="animales" src="${animal.imagen}" alt="${animal.nombre}" /></a>
-        </div>`
-    })
-};
+const cantidad = 1;
+let desde = 0;
 
+// Construir las tarjetas con los animales recibidos
+function armarListaAnimales(animales) {
+    const contenedor = document.getElementById(
+        'contenedorTarjetasAnimales'
+    );
+
+    contenedor.replaceChildren();
+
+    animales.forEach(animal => {
+        const tarjeta = document.createElement('div');
+        tarjeta.className = 'tarjetaAnimal';
+
+        const titulo = document.createElement('h3');
+        titulo.className = 'nombreAnimal';
+        titulo.textContent = animal.nombre;
+
+        const enlace = document.createElement('a');
+        enlace.href = `AnimalesDetallados.html?id=${encodeURIComponent(animal.id)}`;
+
+        const imagen = document.createElement('img');
+        imagen.className = 'animales';
+        imagen.src = animal.foto;
+        imagen.alt = animal.nombre;
+
+        enlace.append(imagen);
+        tarjeta.append(titulo, enlace);
+        contenedor.append(tarjeta);
+    });
+}
+
+// Solicitar animales al servidor
+async function cargarAnimales() {
+    try {
+        const url = `/api/animales?cantidad=${cantidad}&from=${desde}&categoria=${encodeURIComponent(idCategoria)}`;
+
+        const respuesta = await fetch(url);
+
+        if (!respuesta.ok) {
+            throw new Error("Error al consultar los animales");
+        }
+
+        const resultado = await respuesta.json();
+
+        armarListaAnimales(resultado.datos);
+
+        document.getElementById('contador').textContent =
+            `Mostrando ${resultado.datos.length} de ${resultado.total}`;
+
+        document.getElementById('anterior').disabled =
+            desde === 0;
+
+        document.getElementById('siguiente').disabled =
+            desde + cantidad >= resultado.total;
+
+    } catch (error) {
+        console.error(error.message);
+
+        document.getElementById(
+            'contenedorTarjetasAnimales'
+        ).textContent = "No se pudieron cargar los animales";
+    }
+}
+
+// Cargar la información de la categoría
 function cargarCategoria() {
-    const textoURL = window.location.search; //Captura como texto todo lo que aparece en la dirección web a partir del signo de interrogación. Ej: "?id=aereos"
-    const parametros = new URLSearchParams(textoURL); //Toma la cadena previamente leía y la vuelve un objeto estructurado de js fácil de leer y manipular
-    const idCategoria = parametros.get('id'); //Busca en el documento que coincida con el nombre del id
+    const info = tarjetasCategorias[idCategoria];
 
-    const categoria = tarjetasCategorias[idCategoria];
+    const titulos = {
+        aereos: "Animales Aéreos",
+        acuaticos: "Animales Acuáticos",
+        terrestres: "Animales Terrestres"
+    };
 
-    document.getElementById('tituloCategoria').textContent = categoria.tituloCategoria;
-    document.getElementById('descripcion').textContent = categoria.descripcion;
-    document.getElementById('ubicacion').textContent = categoria.ubicacion;
-    document.getElementById('horario').textContent = categoria.horario;
-    document.getElementById('consejo').textContent = categoria.consejo;
+    document.getElementById('tituloCategoria').textContent =
+        info?.tituloCategoria ?? titulos[idCategoria] ?? "Categoría desconocida";
 
-    armarListaAnimales(idCategoria);
+    document.getElementById('descripcion').textContent =
+        info?.descripcion ?? "";
+
+    document.getElementById('ubicacion').textContent =
+        info?.ubicacion ?? "";
+
+    document.getElementById('horario').textContent =
+        info?.horario ?? "";
+
+    document.getElementById('consejo').textContent =
+        info?.consejo ?? "";
+
+    document.getElementById('anterior').addEventListener('click', () => {
+        desde = Math.max(0, desde - cantidad);
+        cargarAnimales();
+    });
+
+    document.getElementById('siguiente').addEventListener('click', () => {
+        desde += cantidad;
+        cargarAnimales();
+    });
+
+    cargarAnimales();
 }
 
 cargarCategoria();

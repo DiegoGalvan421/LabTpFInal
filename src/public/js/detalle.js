@@ -66,37 +66,71 @@ function armarListaDistribucionGeo(listaPaises) {
 }
 
 // Esta función carga la información que tenemos guardada en la página de AnimalesDetallados dependiendo el animal
-function cargarDetalle() {
-  const textoURL = window.location.search; //Captura como texto todo lo que aparece en la dirección web a partir del signo de interrogación. Ej: "?id=tero"
-  const parametros = new URLSearchParams(textoURL); //Toma la cadena previamente leía y la vuelve un objeto estructurado de js fácil de leer y manipular
-  const idAnimal = parametros.get('id'); //Busca en el documento que coincida con el nombre del id
 
-  const animal = detalleAnimales[idAnimal];
+async function cargarDetalle() {
+    const parametros = new URLSearchParams(window.location.search);
+    const idAnimal = parametros.get('id');
 
-  if (!animal) {
-    console.error("Animal no encontrado en la base de datos");
-    return;
-  } else {
-    console.log(animal.nombre);
+    if (!idAnimal) {
+        document.getElementById('nombre').textContent =
+            "No se indicó ningún animal";
+    } else {
+        try {
+            const respuesta = await fetch(
+                `/api/animales/${encodeURIComponent(idAnimal)}`
+            );
 
-    // Una vez que tenemos el id del animal, llamamos a la función que arma la lista para luego insertarla
-    armarListaDistribucionGeo(animal.distribucionGeografica);
+            if (respuesta.status === 404) {
+                document.getElementById('nombre').textContent =
+                    "Animal no encontrado";
+            } else if (!respuesta.ok) {
+                throw new Error("No se pudo obtener el animal");
+            } else {
+                const animal = await respuesta.json();
 
-    // Insertamos los elementos de uno en uno en la página HTML
-    document.getElementById('nombre').textContent = animal.nombre;
-    document.getElementById('frase').textContent = animal.frase;
-    document.getElementById('nombreCientifico').textContent = animal.nombreCientifico;
-    document.getElementById('familia').textContent = animal.familia;
-    document.getElementById('descripcionGeneral').textContent = animal.descripcionGeneral;
-    document.getElementById('foto').src = animal.foto;
-    document.getElementById('foto').alt = animal.altFoto;
-    document.getElementById('descripcionHabitat').textContent = animal.descripcionHabitat;
-    document.getElementById('imagenHabitat').src = animal.imagenHabitat;
-    document.getElementById('imagenHabitat').alt = animal.altImagenHabitat;
-    document.getElementById('pieImagen').textContent = animal.pieImagen;
-    document.getElementById('estado').textContent = animal.estado;
-  }
+                document.getElementById('nombre').textContent = animal.nombre;
+                document.getElementById('frase').textContent = animal.frase ?? "";
+                document.getElementById('nombreCientifico').textContent = animal.nombreCientifico ?? "";
+                document.getElementById('familia').textContent = animal.familia ?? "";
+                document.getElementById('descripcionGeneral').textContent = animal.descripcionGeneral ?? "";
+
+                const foto = document.getElementById('foto');
+                if (animal.foto) {
+                    foto.src = animal.foto;
+                    foto.alt = animal.altFoto ?? animal.nombre;
+                } else {
+                    foto.hidden = true;
+                }
+
+                document.getElementById('descripcionHabitat').textContent =
+                    animal.descripcionHabitat ?? "";
+
+                armarListaDistribucionGeo(
+                    animal.distribucionGeografica ?? []
+                );
+
+                const imagenHabitat = document.getElementById('imagenHabitat');
+                if (animal.imagenHabitat) {
+                    imagenHabitat.src = animal.imagenHabitat;
+                    imagenHabitat.alt = animal.altImagenHabitat ?? "Hábitat";
+                } else {
+                    imagenHabitat.hidden = true;
+                }
+
+                document.getElementById('pieImagen').textContent =
+                    animal.pieImagen ?? "";
+
+                document.getElementById('estado').textContent =
+                    animal.estado ?? "";
+            }
+        } catch (error) {
+            console.error(error);
+            document.getElementById('nombre').textContent =
+                "Error al cargar la información del animal";
+        }
+    }
 }
 
 cargarDetalle();
+
 
