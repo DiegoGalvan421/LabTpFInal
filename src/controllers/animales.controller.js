@@ -42,4 +42,16 @@ function actualizarAnimal(req, res) {
     }
 }
 
-module.exports = {crearAnimal, actualizarAnimal};
+function obtenerAnimal(req, res) {
+    const id = req.params.id.toLowerCase();
+
+    const animal = service.buscarAnimal(id);
+
+    if(animal === null) {
+        res.status(404).json({mensaje:"No se encontro un animal con ese ID"});
+    } else {
+        res.status(200).json(animal);
+    }
+}
+
+module.exports = {crearAnimal, actualizarAnimal, obtenerAnimal};
