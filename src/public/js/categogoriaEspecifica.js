@@ -9,19 +9,6 @@ const tarjetasCategorias = {
 
 };
 
-const tarjetasAnimales = {
-    aereos: [
-        { nombre: "Tero", link: "AnimalesDetallados.html?id=tero", imagen: "../imagenes/Tero.png" },
-        { nombre: "Loro Barranquero", link: "AnimalesDetallados.html?id=loro", imagen: "../imagenes/loro.jpeg" },
-
-    ],
-    acuaticos: [
-        { nombre: "", link: "", imagen: "" },
-    ],
-    terrestres: [
-        { nombre: "", link: "", imagen: "" },
-    ]
-};
 
 
 const parametros = new URLSearchParams(window.location.search);

@@ -24,7 +24,7 @@ function actualizarAnimal(req, res) {
     const id = req.params.id.toLowerCase();
     const datosActualizados = req.body;
 
-    const validez = (datosActualizados !== null && typeof datosActualizados === 'object' && typeof datosActualizados.nombre === 'string' && typeof datosActualizados.categoria === 'string' && ["aereos", "terrestres", "acuaticos"].includes(datosActualizados.categoria) && datosActualizados.id === undefined || datosActualizados.id === id);
+    const validez = (datosActualizados !== null && typeof datosActualizados === 'object' && typeof datosActualizados.nombre === 'string' && typeof datosActualizados.categoria === 'string' && ["aereos", "terrestres", "acuaticos"].includes(datosActualizados.categoria) && (datosActualizados.id === undefined || datosActualizados.id === id));
 
     if(!validez){
         res.status(400).json({mensaje:"Los campos obligatorios del animal(nombre,categoria) son invalidos o se intento modificar el ID)"});
