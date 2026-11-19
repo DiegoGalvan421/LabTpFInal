@@ -6,4 +6,5 @@ const router = express.Router();
 router.post('/', controlador.crearAnimal);
 router.put('/:id', controlador.actualizarAnimal);
 router.get('/:id', controlador.obtenerAnimal);
+router.get('/', controlador.listarAnimales);
 module.exports = router;

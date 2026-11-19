@@ -6,7 +6,7 @@ const detalleAnimales = [ {
     frase: '"El guardián territorial de las pampas y pastizales de América"',
     nombreCientifico: "Nombre científico: Vanellus chilensis",
     familia: "Familia: Charadriidae",
-    categoria: "aereo",
+    categoria: "aereos",
     descripcionGeneral: `El tero (Vanellus chilensis) es una emblemática ave zancuda de la familia Charadriidae, muy reconocida en
           América del Sur por su elegancia y su comportamiento siempre alerta. Presenta un plumaje distintivo de tonos
           grises y pardos en el dorso, un pecho negro brillante, una fina cresta o copete en la cabeza y llamativos ojos
@@ -34,7 +34,7 @@ const detalleAnimales = [ {
     frase: '"El emblemático habitante social de las bardas y acantilados patagónicos"',
     nombreCientifico: "Nombre científico: Cyanoliseus patagonus",
     familia: "Familia: Psitácidos",
-    categoria: "aereo",
+    categoria: "aereos",
     descripcionGeneral: `El loro barranquero o loro tricahue (Cyanoliseus patagonus) es una especie de ave psitaciforme de la familia de los psitácidos que habita en la meseta patagónica y en las laderas de las montañas de la cordillera de los Andes en Argentina y Chile. 
       Es la única especie viviente del género Cyanoliseus. También se le conoce como tricagüe, tricau, loro patagón, loro minero, maracaná patagón y guacamayo patagónico. 
       La longitud promedio en las subespecies argentinas es de 42 cm, mientras que en la subespecie chilena es de 45 cm, con un rango, en esta última, de 43 a 47 cm.

@@ -54,4 +54,25 @@ function obtenerAnimal(req, res) {
     }
 }
 
-module.exports = {crearAnimal, actualizarAnimal, obtenerAnimal};
+function listarAnimales(req, res) {
+    //obtenemos los parametros de la url, si no vienen, se asigna un valor por defecto
+    const cantidadT= req.query.cantidad ?? 5;
+    const desdeT= req.query.from ?? 0;
+    const categoriaT= req.query.categoria;
+    //convertimos los valores a numeros
+    const cantidad = Number(cantidadT);
+    const desde = Number(desdeT);
+
+    //validacion
+    const validez = (cantidad>0 && desde>=0 && (categoriaT===undefined||["aereos", "terrestres", "acuaticos"].includes(categoriaT)));
+    if(!validez){
+        res.status(400).json({mensaje:"Los parametros de consulta son invalidos"});
+    }else{
+        const resultado= service.listarAnimales(cantidad,desde,categoriaT);
+
+        res.status(200).json(resultado);
+    }
+
+}
+
+module.exports = {crearAnimal, actualizarAnimal, obtenerAnimal, listarAnimales};
